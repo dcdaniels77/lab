@@ -153,8 +153,8 @@ ul li, ol li {
 	height: 700px;
 	position: relative;
 	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+	-webkit-background-size: 700px;
+	-moz-background-size: 700px;
 	-o-background-size: cover;
 	background-size: cover;
 }
@@ -178,7 +178,7 @@ ul li, ol li {
 }
 
 #home-slides div:nth-of-type(1) {
-	background: url("../images/Large/cover.jpg.jpg") 50% 0 no-repeat fixed;
+	background: url("../images/Large/cover.jpg") 50% 0 no-repeat fixed;
 }
 
 /* changes colour of link because of blue bg */
