@@ -178,6 +178,8 @@ ul li, ol li {
 	font-family: 'signpainter', Helvetica, sans-serif;
 	color: #e42186;
 	text-shadow: 0 0 11px rgba(228,153,206,0.6);
+	position: relative;
+	top: 472px;
 }
 
 #home-slides div:nth-of-type(1) {
@@ -194,7 +196,7 @@ ul li, ol li {
 
 #home-slides div:nth-of-type(3) p {
 	font-style: normal;
-	font-size: 200%;
+	font-size: 100%;
 }
 
 /*** CONTENT ***/
