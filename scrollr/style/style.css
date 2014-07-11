@@ -178,7 +178,7 @@ ul li, ol li {
 }
 
 #home-slides div:nth-of-type(1) {
-	background: url("../images/large/alex-bg-large.jpg") 50% 0 no-repeat fixed;
+	background: url("../images/large/cover.jpg") 50% 0 no-repeat fixed;
 }
 
 /* changes colour of link because of blue bg */
