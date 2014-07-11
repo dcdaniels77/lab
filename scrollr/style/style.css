@@ -181,11 +181,6 @@ ul li, ol li {
 	background: url("../images/Large/alex-bg-large.jpg") 50% 0 no-repeat fixed;
 }
 
-/* changes colour of link because of blue bg */
-#home-slides div:nth-of-type(1) a {
-	color: #e42186;
-}
-
 #home-slides div:nth-of-type(2) {
 	background: url("../images/large/141014566_CL_Booklet_8_Spread_3.jpg") 50% 0 no-repeat fixed;
 }
