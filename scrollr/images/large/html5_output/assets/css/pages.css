@@ -1,0 +1,336 @@
+/* 	Begin Modified Meyer Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body { line-height: 1; }
+table { border-collapse: collapse; border-spacing: 0; }
+ul { list-style-type:disc; }
+/*General styles*/
+
+html, body, #container { height: 100%; }
+button { border:none;}
+#container { height: 100%; min-height: 100%;}
+b { font-weight: bold; }
+i { font-style:italic; }
+a { color:inherit; text-decoration:inherit; }
+p:first-child { margin-top: inherit !important; }
+*{ outline:none; animation-fill-mode:both !important; -webkit-animation-fill-mode:both !important; }
+[onclick], [onrollover], button { cursor:pointer; pointer-events:auto; }
+
+#in5footer,#demoNote,#loadIndicator{
+	min-width:100%;
+	color:#fff;
+	background:#666;
+	font-family:"Trebuchet MS", "Lucida Grande", Helvetica, sans-serif;
+	text-align:center;
+	font-size:15px;
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+}
+
+#loadIndicator{
+	top:0; left:0; margin:auto;
+	padding: 6px;
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition:all 1s ease-in .5s;
+    opacity:1;
+    z-index:99;
+}
+
+body.loaded #loadIndicator {
+	opacity:0;
+	transform:translateY(-36px);
+	-webkit-transform:translateY(-36px);
+}
+
+#loadIndicator img {
+	vertical-align:text-bottom;
+    width:18px;
+}
+
+#loadIndicator span:after {
+	content:' Loading Content...';
+}
+
+html.local #loadIndicator, html.dps #loadIndicator, html.baker #loadIndicator { display:none; }
+
+#in5footer{
+	height:26px;
+	line-height:26px;
+	clear:both;
+	position: relative;
+	margin-top: -26px;
+}
+
+#demoNote {
+    right: 0; bottom: 0; margin: auto;
+    height: 96px !important;
+    padding: 36px 10px;
+}
+
+#in5footer a, #demoNote a {
+	text-decoration:none;
+	color:#99ccff;
+}
+
+.pageItem, svg { position: absolute; }
+
+.pageItem, .pageItemIFrame {
+	display:block;
+	top:0;
+	left:0;
+	width:auto !important;
+	height:auto !important;
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+	-webkit-tap-highlight-color:transparent;
+}
+
+html.ios .iframe-container { overflow:auto; -webkit-overflow-scrolling:touch; }
+
+.page {
+	position:relative;
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+}
+
+.pages {
+	list-style: none outside none;
+	padding: 0;
+	margin: 0 auto ;
+}	
+
+#container > .page { /*center single page baker*/
+    position:absolute;
+    bottom:0;
+    left:0; 
+    right:0;
+    top:0;
+    margin:0 auto;
+}
+
+.textColumn { float:left; }
+.singleline p { line-height: 1em !important; }
+
+.scroll {
+	overflow:auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.scroll-vert {
+	overflow-y:auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (max-device-width : 1024px) {
+	.anythingSlider {padding:0;}
+}
+
+object, embed, img, a { 
+  outline: 0;
+}
+
+.liquid svg {
+    height: 100%;
+    width: 100%;
+}
+
+.noPlugin {
+	width:100%;
+	height:100%;
+	background:#ccc;
+	border:1px solid #666;
+	padding:6px;
+}
+
+.paper-vertical, .paper-horizontal {
+	padding: 0 8px;
+}
+
+.paper-horizontal {
+	position:absolute;
+	top:50%;
+	overflow:visible;
+}
+
+.paper-vertical .page, .paper-horizontal .page {
+	border: 1px solid #bbb;	
+	margin: 4px 4px 4px 0;
+	-moz-box-shadow: 0px 0px 0px #999;
+	-webkit-box-shadow: 0px 0px 5px #999;
+	box-shadow: 0px 0px 5px #999;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+
+.liquid .page, .page.liquid {
+	position: absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	display:none;
+}
+
+.page.liquid { /*for multi-file*/
+    display:block;
+}
+
+.liquid .page.activePage {
+	display:block;
+}
+
+.liquid video { width:100%; height:100%; }
+
+.page.ls { bottom:auto !important; }
+
+#container > nav { display:none; }
+#container > nav > button {
+	display: block;
+	position:absolute;
+	top:50%;
+	width: 68px;
+	height: 68px;
+	margin: -34px 0 0 0; /* half height of image */
+	text-align: center;
+	outline: 0;
+	background: url(../images/arrows-slider.png) no-repeat;
+}	
+
+#container > nav > button:hover { opacity:.7; }
+
+#container > nav > #backBtn { 
+	left: 0; 
+	background-position: left bottom;
+}
+#container > nav > #nextBtn { 
+	right: 0; 
+	background-position: right bottom; 
+}
+
+
+/* ColorBox Core Style: The following CSS is consistent between example themes and should not be altered. */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling:touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+/* 	User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#fff;}
+#colorbox{
+	border-radius: 12px;
+    box-shadow: 0 0 10px 10px #CCCCCC;
+}
+    #cboxContent{background:#fff; overflow:hidden;}
+    #cboxMiddleLeft, #cboxMiddleRight { width:8px; }
+    #cboxTopCenter{ height:24px; } 
+    #cboxBottomCenter { height:8px; }
+	.cboxIframe{background:#fff;}
+	#cboxError{padding:50px;}
+	#cboxLoadedContent{background:#fff; margin-top:28px;}
+	#cboxTitle{position:absolute; top:4px; left:0; text-align:center; width:100%; color:#949494;}
+	#cboxCurrent{position:absolute; top:4px; left:0px; color:#949494;}
+	#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+	#cboxPrevious{position:absolute; top:50%; left:0px; margin-top:-32px; background:url(../images/lb_controls.png) no-repeat top left; width:33px; height:65px; text-indent:-9999px;}
+	#cboxNext{position:absolute; top:50%; right:0px; margin-top:-32px; background:url(../images/lb_controls.png) no-repeat top right; width:33px; height:65px; text-indent:-9999px;}
+	#cboxLoadingOverlay{background:#fff;}
+	#cboxLoadingGraphic{background:url(../images/loading.gif) no-repeat center center;}
+	#cboxClose{position:absolute; top:2px; right:0px; display:block; background:url(../images/lb_controls.png) no-repeat top center; width:26px; height:24px; text-indent:-9999px;}
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft, .cboxIE #cboxTopCenter, .cboxIE #cboxTopRight, .cboxIE #cboxBottomLeft, .cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight, .cboxIE #cboxMiddleLeft, .cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+.hidden { display:none; }
+.mso, .group { pointer-events:none; }
+[data-useswipe="1"], .group > * { pointer-events:auto; }
+.mso > .state { display:none; width:100% !important; height:inherit !important; position:absolute; z-index:-1; pointer-events:auto; }
+.liquid .mso > .state { height:100% !important; }
+.mso > .state.active { display:block; z-index:0; }
+.mso.slideshow.seq, .panzoom { overflow: hidden; }
+.panzoom { cursor:move; cursor:-moz-grab; cursor:-webkit-grab; }
+
+.align-vert { display:table; }
+[class^="valign"] {
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+}
+.valign-bottom { vertical-align:bottom; }
+
+.flex-image {
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.fill-image {
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+/*anchor object styles*/
+img.noTextWrap {
+	position:absolute;
+}
+
+img.alignLeft { float:left; }
+img.alignRight { float:right; }
+img.alignCenter {display:block; margin-left:auto; margin-right:auto;}
+
+img.leftFullWidth {
+	float:left;
+	padding-right:100%;
+}
+
+img.rightFullWidth {
+	float:right;
+	padding-left:100%;
+}
+
+ul.thumbs {
+	padding:20px;
+	white-space: nowrap;
+    width: 1px;
+}
+
+ul.thumbs li { /*Baker index thumbnails*/
+    display:inline;
+    list-style-type:none;
+    margin: 0 4px;
+    outline: none;
+    vertical-align:top;
+}
+ul.thumbs > li img { box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+
+/*CSS Generated from InDesign Styles*/
+body { background:#ededed url("../images/bg-body.") no-repeat left top/cover; }.page { width:306.00px; height:459.00px; background: #fff !important; }.paper-vertical { width:306.00px; height:100%; }.paper-horizontal { width:3792.00px; height:459.00px; margin-top:-229.50px; }@media all and (max-height:459.00px) {	.paper-horizontal { margin:0;top:0;}	#container > .page { margin:0 auto;}/*pos top for webkit+baker*/}@media all and (max-width:306.00px) {	.paper-vertical .page, .paper-horizontal .page, .anythingSlider-in5 { padding:0;margin:0;top:0;border:0; }	.paper-vertical, .paper-horizontal { padding:0; }}#item340 {	width:105px !important;	height:16px !important;	top:47px !important;}#item452 {	width:67px !important;	height:50px !important;	left:73px !important;	top:107px !important;}#item524 {	width:87px !important;	height:52px !important;	left:212px !important;	top:336px !important;}#item549 {	width:158px !important;	height:118px !important;}#item574 {	width:87px !important;	height:22px !important;	left:201px !important;	top:412px !important;}#item428 {	width:119px !important;	height:44px !important;	left:165px !important;	top:419px !important;}#item476 {	width:158px !important;	height:71px !important;	left:20px !important;	top:151px !important;}#item500 {	width:82px !important;	height:43px !important;	left:53px !important;	top:347px !important;}#item651 {	width:139px !important;	height:18px !important;	left:35px !important;	top:420px !important;}#item675 {	width:79px !important;	height:46px !important;	left:37px !important;	top:186px !important;}#item699 {	width:76px !important;	height:46px !important;	left:226px !important;	top:274px !important;}#item723 {	width:111px !important;	height:6px !important;	left:184px !important;	top:435px !important;}#item749 {	width:182px !important;	height:118px !important;}#item774 {	width:68px !important;	height:39px !important;	left:218px !important;	top:381px !important;}#item914 {	width:256px !important;	height:20px !important;	left:27px !important;	top:414px !important;}#item866 {	width:85px !important;	height:74px !important;	left:116px !important;	top:308px !important;}#item890 {	width:88px !important;	height:64px !important;	left:100px !important;	top:42px !important;}#item991 {	width:122px !important;	height:59px !important;	left:201px !important;	top:325px !important;}#item1016 {	width:158px !important;	height:136px !important;}#item1063 {	width:122px !important;	height:59px !important;	left:189px !important;	top:77px !important;}#item967 {	width:79px !important;	height:59px !important;	left:45px !important;	top:218px !important;}#item1088 {	width:66px !important;	height:59px !important;	left:213px !important;	top:374px !important;}#item1172 {	width:60px !important;	height:64px !important;	left:228px !important;	top:54px !important;}#item1210 {	width:68px !important;	height:59px !important;	left:32px !important;	top:166px !important;}#item1234 {	width:60px !important;	height:66px !important;	left:240px !important;	top:273px !important;}#item1258 {	width:88px !important;	height:33px !important;	left:164px !important;	top:392px !important;}#item1282 {	width:256px !important;	height:20px !important;	left:27px !important;	top:414px !important;}#item1307 {	width:158px !important;	height:136px !important;}#item1335 {	width:73px !important;	height:72px !important;	left:212px !important;	top:31px !important;}#item1431 {	width:306px !important;	height:18px !important;	top:429px !important;}#item1455 {	width:83px !important;	height:31px !important;	left:50px !important;	top:240px !important;}#item1479 {	width:92px !important;	height:40px !important;	left:203px !important;	top:115px !important;}#item1503 {	width:84px !important;	height:38px !important;	left:203px !important;	top:360px !important;}#in5footer {display:none;}
