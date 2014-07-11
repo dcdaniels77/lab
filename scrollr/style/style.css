@@ -167,7 +167,7 @@ ul li, ol li {
 	width: 800px;
 	z-index: 4;
 	text-shadow: 0 0 11px rgba(255,255,255,0.6);
-	color: #fff;
+	color: #040404;
 }
 
 #home-slides span {
@@ -195,7 +195,9 @@ ul li, ol li {
 }
 
 #home-slides div:nth-of-type(3) p {
-	color: #111;
+	color: #FFFFFF;
+	font-style: normal;
+	font-size: 9px;
 }
 
 /*** CONTENT ***/
