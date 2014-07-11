@@ -153,8 +153,8 @@ ul li, ol li {
 	height: 700px;
 	position: relative;
 	width: 100%;
-	-webkit-background-size: 700px;
-	-moz-background-size: 700px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
