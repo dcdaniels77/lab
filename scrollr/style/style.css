@@ -165,7 +165,7 @@ ul li, ol li {
 #home-slides p {
 	position: absolute;
 	display: inline;
-	top: 14%;
+	top: 3%;
 	left: 12px;
 	width: 800px;
 	z-index: 4;
@@ -174,12 +174,12 @@ ul li, ol li {
 }
 
 #home-slides span {
-	font-size: 2.4em;
+	font-size: 1em;
 	font-family: 'signpainter', Helvetica, sans-serif;
 	color: #e42186;
-	text-shadow: 0 0 11px rgba(228,153,206,0.6);
+	text-shadow: 0 0 15px rgba(255,255,255,0.00);
 	position: relative;
-	top: 472px;
+	top: 519px;
 }
 
 #home-slides div:nth-of-type(1) {
