@@ -30,6 +30,9 @@
 
 img, embed, object, video {
 	max-width: 100%;
+	position: relative;
+	top: 368px;
+	left: 158px;
 }
 
 body {
