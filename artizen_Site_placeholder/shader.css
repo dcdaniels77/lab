@@ -129,7 +129,8 @@ a:focus {
 .form-and-links-container {
     padding-top: 25px
 	padding-bottom: 25px;
-    overflow: hidden;
+	overflow: hidden;
+	position: relative;
 }
 
 
@@ -142,8 +143,6 @@ a:focus {
 
 .subscription-form {
 	margin: 0;
-	padding-top: auto;
-	padding-left: auto;
 	position: relative;
 	background: rgba(0, 0, 0, 0.5);
 }
@@ -415,8 +414,7 @@ a:focus {
     }
 
     .subscription-form {
-		align-self:center;
-		
+	position: relative;
     }
 
     .subscription-form-email {
