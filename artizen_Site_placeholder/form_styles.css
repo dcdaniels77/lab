@@ -16,7 +16,6 @@
 	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
 	padding: 5px;
 	height: 60px;
-	overflow: hidden;
 	position: relative;
 	z-index: auto;
 }
