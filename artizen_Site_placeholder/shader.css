@@ -495,7 +495,6 @@ a:focus {
 .theme-fire .subscription-form-email:focus {
 	border-color: #d44032;
 	/* [disabled]border-width: thin; */
-	padding-left: 33%;
 }
 
 .theme-fire .subscription-form-submit {
