@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    display: table-cell;
+    display:flex:
     margin: 0;
     vertical-align: middle;
     text-align: center;
@@ -90,8 +90,11 @@ a:focus {
 ==================================================================================================*/
 
 .content {
-    padding: 40px 0;
-    position: relative;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 40px;
+	position: relative;
 }
 
 
@@ -104,10 +107,9 @@ a:focus {
 
 .header {
 	margin-bottom: 5px;
-	font-size: 91%;
+	font-size: 100%;
 	line-height: 302.2;
 	font-weight: 900;
-	top: auto;
 }
 
 .description {
