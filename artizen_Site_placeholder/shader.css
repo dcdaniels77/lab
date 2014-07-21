@@ -141,10 +141,11 @@ a:focus {
 ==================================================================================================*/
 
 .subscription-form {
-    margin: 0;
-    padding: 0 15px 15px;
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	padding-top: auto;
+	padding-left: auto;
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -414,7 +415,8 @@ a:focus {
     }
 
     .subscription-form {
-        padding: 0 0 35px;
+		align-self:center;
+		
     }
 
     .subscription-form-email {
@@ -493,6 +495,7 @@ a:focus {
 .theme-fire .subscription-form-email:focus {
 	border-color: #d44032;
 	/* [disabled]border-width: thin; */
+	padding-left: 33%;
 }
 
 .theme-fire .subscription-form-submit {

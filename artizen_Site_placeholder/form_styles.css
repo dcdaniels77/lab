@@ -1,7 +1,11 @@
 @charset "UTF-8";
 .theme-fire .form-and-links-container.col-sm-8.col-sm-offset-2 {
 	border-top: 25px;
-	width: 50%;
+	width: auto;
 	align-content: center;
 	align-self: center;
+}
+
+.form-and-links-container {
+	padding-left: 28%;
 }
