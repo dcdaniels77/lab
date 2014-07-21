@@ -103,10 +103,11 @@ a:focus {
 ==================================================================================================*/
 
 .header {
-    margin-bottom: 30px;
-    font-size: 80px;
-    line-height: 1.2;
-    font-weight: 100;
+	margin-bottom: 5px;
+	font-size: 91%;
+	line-height: 302.2;
+	font-weight: 900;
+	top: auto;
 }
 
 .description {
@@ -489,7 +490,6 @@ a:focus {
 .theme-fire .subscription-form-email:focus {
 	border-color: #d44032;
 	/* [disabled]border-width: thin; */
-	padding-top: 25px;
 }
 
 .theme-fire .subscription-form-submit {
@@ -502,7 +502,8 @@ a:focus {
 }
 
 .theme-fire .subscription-form-submit:active {
-    background: #a62e23;
+	background: #a62e23;
+	color: #E54345;
 }
 
 .theme-fire .social-links > a:hover,
