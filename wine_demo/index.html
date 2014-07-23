@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="file:///Brown67/Users/ddaniels/Desktop/Dropbox/Public/stella_lab/wine_demo/demo_mindfire.css" rel="stylesheet" type="text/css">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div id="div1" class="fluid">Use Insert Panel for additional Fluid Grid Layout Elements. Note: All Fluid Layout tags must be contained within the "gridContainer" div tag.</div>
+  <div class="page-header"><img src="https://dl.dropbox.com/u/2126295/Assets/tmplt/shim_logo.jpg" />
+<h5 class="pull-right">Call us: ##company_phone##</h5>
+</div>
+<!--/page-header-->
+
+<div class="row-fluid">
+<div class="span8">
+<p class="lead">Join the ##company_name## team at ##event_name##!</p>
+
+<p>Visit us on ##event_date## at our booth ##booth_number## for a brief meeting and learn how you can win new business and keep your customers happy!</p>
+
+<center>
+<p><img alt="Meet with the ##company_name## team" class="img-rounded" height="300" src="http://dl.dropbox.com/u/2126295/Demo/meeting.jpg" width="500" /></p>
+</center>
+
+<p>At ##event_name##, our experienced Business Consultants are more than happy to meet with you and assist you with your questions about business strategy and growth.</p>
+<!-- the following section will not appear on a phone-->
+
+<section class="hidden-phone">
+<p class="hidden-phone">[The following section will NOT be visible on the cellphones] At the ##company_name##&#39;s booth you&#39;ll learn how to:</p>
+
+<ul>
+	<li>Effortlessly find the best customers and prospects in your region, and send them special offers they cannot refuse.</li>
+	<li>Design and implement customer loyalty programs that will keep your customers coming back to you for more business.</li>
+</ul>
+[end of hidden-phone section]</section>
+<!-- end hidden-phone section -->
+
+<p>Fill out the form to set an appointment at our booth in ##company_event##, or simply schedule an online demo to learn more about ##company_name##&#39;s services!</p>
+</div>
+<!--/main-->
+
+<div class="well span4" >
+<form method="post" name="form1" id="form1">
+<fieldset><legend>Please fill out the form to RSVP:</legend> <label for="rsvp"><strong>What would you like to do?</strong>*</label> <select id="action" name="rsvp" tabindex="5"><option value="">-- Select --</option><option value="appointment">Schedule an appointment at ##event_name##</option><option value="demo">Schedule an online demo</option><option value="notsure">Not sure</option> </select> <label for="firstname"><strong>First Name</strong>*</label> <input id="firstname" name="firstname" placeholder="John" tabindex="10" type="text" /> <label for="lastname"><strong>Last Name</strong>*</label> <input id="lastname" name="lastname" placeholder="Sample" tabindex="20" type="text" /> <label for="company"><strong>Company</strong>*</label> <input id="company" name="company" placeholder="My Company" tabindex="30" type="text" /> <label for="email"><strong>Email</strong>*</label> <input id="email" name="email" placeholder="email@mycompany.com" tabindex="40" type="text" /> <label for="phone"><strong>Phone</strong>*</label> <input id="phone" name="phone" placeholder="1234567890" tabindex="50" type="text" /> <label for="mobile"><strong>Cell Phone </strong><small>(we&#39;ll send you reminder text messages)</small></label> <input id="mobile" name="mobile" placeholder="1234567890" tabindex="50" type="text" /><br />
+<input class="btn btn-primary btn-large btn-block" tabindex="100" type="submit" value="Submit" /></fieldset>
+
+<p class="pull-right"><small><i>* Required field.</i><br />
+We&#39;ll never spam you. Promise. Read our <a href="##company_privacy_link##">Privacy Policy</a>.</small></p>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
