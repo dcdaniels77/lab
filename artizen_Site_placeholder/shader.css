@@ -487,7 +487,7 @@ a:focus {
 ----------------------------------------------------------*/
 
 .theme-fire {
-    background-image: url("../fire.shader-bg.jpg");
+	background-image: url(/u/83228040/stella_lab/wine_demo/html5_output/fire.shader-bg.jpg);
 }
 
 .theme-fire .subscription-form-email:focus {
