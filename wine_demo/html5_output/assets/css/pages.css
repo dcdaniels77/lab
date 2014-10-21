@@ -1,290 +1,0 @@
-/* 	Begin Modified Meyer Reset */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body { line-height: 1; letter-spacing: -0.25px; }
-table { border-collapse: collapse; border-spacing: 0; }
-ul { list-style-type:disc; }
-/*General styles*/
-
-html, body, #container { height: 100%; }
-button { border:none;}
-#container { height: 100%; min-height: 100%;}
-b { font-weight: bold; }
-i { font-style:italic; }
-a { color:inherit; text-decoration:inherit; }
-p:first-child { margin-top: inherit !important; }
-*{ outline:none; animation-fill-mode:both !important; -webkit-animation-fill-mode:both !important; }
-[onclick], [onrollover], button { cursor:pointer; pointer-events:auto; }
-
-#in5footer,#demoNote,#loadIndicator{
-	min-width:100%;
-	color:#fff;
-	background:#666;
-	font-family:"Trebuchet MS", "Lucida Grande", Helvetica, sans-serif;
-	text-align:center;
-	font-size:15px;
-	box-sizing:border-box; 
-	-moz-box-sizing:border-box;
-}
-
-#loadIndicator{
-	top:0; left:0; margin:auto;
-	padding: 6px;
-    position: fixed;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition:all 1s ease-in .5s;
-    opacity:1;
-    z-index:99;
-}
-body.loaded #loadIndicator {
-	opacity:0;
-	transform:translateY(-36px);
-	-webkit-transform:translateY(-36px);
-}
-#loadIndicator img {
-	vertical-align:text-bottom;
-    width:18px;
-}
-#loadIndicator span:after { content:' Loading Content...'; }
-html.local #loadIndicator, html.dps #loadIndicator, html.baker #loadIndicator { display:none; }
-
-#in5footer{
-	height:26px;
-	line-height:26px;
-	clear:both;
-	position: relative;
-	margin-top: -26px;
-}
-
-#demoNote {
-    right: 0; bottom: 0; margin: auto;
-    height: 96px !important;
-    padding: 36px 10px;
-}
-
-#in5footer a, #demoNote a {
-	text-decoration:none;
-	color:#99ccff;
-}
-
-.pageItem, svg { position: absolute; }
-
-.pageItem, .pageItemIFrame {
-	display:block;
-	top:0;
-	left:0;
-	width:auto !important;
-	height:auto !important;
-	box-sizing:border-box; 
-	-moz-box-sizing:border-box;
-	-webkit-tap-highlight-color:transparent;
-	padding:0;
-}
-
-html.ios .iframe-container { overflow:auto; -webkit-overflow-scrolling:touch; }
-
-.page {
-	position:relative;
-	float: left;
-	height: 100%;
-	width: 100%;
-	overflow:hidden;
-}
-
-.pages {
-	list-style: none outside none;
-	padding: 0;
-	margin: 0 auto ;
-}	
-
-#container > .page { /*center single page baker*/
-    position:absolute;
-    bottom:0;
-    left:0; 
-    right:0;
-    top:0;
-    margin:0 auto;
-}
-
-.textColumn { float:left; }
-.singleline p { line-height: 1em !important; }
-
-.scroll { overflow:auto; -webkit-overflow-scrolling: touch; }
-.scroll-vert { overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling: touch; }
-.scroll-horiz { overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling: touch; }
-.hidescroll::-webkit-scrollbar { display: none; }
-
-@media only screen and (max-device-width : 1024px) {
-	.anythingSlider {padding:0;}
-}
-
-object, embed, img, a {   outline: 0; }
-
-.liquid svg {
-    height: 100%;
-    width: 100%;
-}
-
-.noPlugin {
-	width:100%;
-	height:100%;
-	background:#ccc;
-	border:1px solid #666;
-	padding:6px;
-}
-
-.paper-vertical, .paper-horizontal { padding: 0 8px; }
-.paper-horizontal {
-	position:absolute;
-	top:50%;
-	overflow:visible;
-}
-
-.paper-vertical .page, .paper-horizontal .page {
-	border: 1px solid #bbb;	
-	margin: 4px 4px 4px 0;
-	-moz-box-shadow: 0px 0px 0px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
-	/* For IE 8 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999')";
-	/* For IE 5.5 - 7 */
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
-}
-
-.liquid .page, .page.liquid {
-	position: absolute;
-	width:100%;
-	height:100%;
-	overflow:hidden;
-	display:none;
-}
-
-.page.liquid { /*for multi-file*/
-    display:block;
-}
-.liquid .page.activePage { 	display:block; }
-.liquid video { width:100%; height:100%; }
-
-.page.ls { bottom:auto !important; }
-
-#container > nav { display:none; }
-#container > nav > button {
-	display: block;
-	position:absolute;
-	top:50%;
-	width: 68px;
-	height: 68px;
-	margin: -34px 0 0 0; /* half height of image */
-	text-align: center;
-	outline: 0;
-	background: url(../images/arrows-slider.png) no-repeat;
-}	
-#container > nav > button:hover { opacity:.7; }
-#container > nav > #backBtn { left: 0; background-position: left bottom; }
-#container > nav > #nextBtn { right: 0; background-position: right bottom; }
-
-/* ColorBox Core Style: The following CSS is consistent between example themes and should not be altered. */
-#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
-#cboxOverlay{position:fixed; width:100%; height:100%;}
-#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
-#cboxContent{position:relative;}
-#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling:touch;}
-#cboxTitle{margin:0;}
-#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
-.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
-.cboxIframe{width:100%; height:100%; display:block; border:0;}
-#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
-
-/* 	User Style:
-    Change the following styles to modify the appearance of ColorBox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#colorbox{
-	border-radius: 12px;
-    box-shadow: 0 0 10px 10px #CCCCCC;
-}
-    #cboxOverlay. #cboxContent, .cboxIframe, #cboxLoadedContent, #cboxLoadingOverlay { background:#fff; }
-    #cboxContent{ overflow:hidden;}
-    #cboxMiddleLeft, #cboxMiddleRight { width:8px; }
-    #cboxTopCenter{ height:24px; } 
-    #cboxBottomCenter { height:8px; }
-	#cboxError{padding:50px;}
-	#cboxLoadedContent{margin-top:28px;}
-	#cboxTitle, #cboxCurrent { position:absolute; top:4px; left:0; color:#949494; }
-	#cboxTitle{ text-align:center; width:100%; }
-	#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
-	#cboxPrevious, #cboxNext { position:absolute; top:50%; margin-top:-32px; width:33px; height:65px; text-indent:-9999px;}
-	#cboxPrevious{left:0px; background:url(../images/lb_controls.png) no-repeat top left; }
-	#cboxNext{right:0px; background:url(../images/lb_controls.png) no-repeat top right; }
-	#cboxLoadingGraphic{background:url(../images/loading.gif) no-repeat center center;}
-	#cboxClose{position:absolute; top:2px; right:0px; display:block; background:url(../images/lb_controls.png) no-repeat top center; width:26px; height:24px; text-indent:-9999px;}
-/*
-  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
-  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
-  See: http://jacklmoore.com/notes/ie-transparency-problems/
-*/
-.cboxIE #cboxTopLeft, .cboxIE #cboxTopCenter, .cboxIE #cboxTopRight, .cboxIE #cboxBottomLeft, .cboxIE #cboxBottomCenter,
-.cboxIE #cboxBottomRight, .cboxIE #cboxMiddleLeft, .cboxIE #cboxMiddleRight {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
-}
-
-.hidden { display:none; }
-.mso, .group, .mso > .state { pointer-events:none; }
-[data-useswipe="1"], .group > * { pointer-events:auto; }
-.mso > .state { display:none; width:100% !important; height:inherit !important; position:absolute; z-index:-1; }
-.liquid .mso > .state { height:100% !important; }
-.mso > .state.active, .mso > .state.transition { display:block; z-index:0; }
-.mso.slideshow.seq, .panzoom { overflow: hidden; }
-.panzoom { cursor:move; cursor:-moz-grab; cursor:-webkit-grab; }
-
-.align-vert { display:table; }
-[class^="valign"] {
-	position:relative;
-	display:table-cell;
-	vertical-align:middle;
-}
-.valign-bottom { vertical-align:bottom; }
-
-.flex-image, .fill-image { background-repeat:no-repeat; }
-.flex-image { background-size:contain; background-position:center; }
-.fill-image { background-size:cover; }
-
-/*anchor object styles*/
-img.noTextWrap { position:absolute; }
-img.alignLeft, img.leftFullWidth { float:left; }
-img.alignRight, img.rightFullWidth { float:right; }
-img.alignCenter {display:block; margin-left:auto; margin-right:auto;}
-img.inlineTable { display:block; }
-img.leftFullWidth { padding-right:100%; }
-img.rightFullWidth { padding-left:100%; }
-
-ul.thumbs {
-	padding:20px;
-	white-space: nowrap;
-    width: 1px;
-}
-
-ul.thumbs li { /*Baker index thumbnails*/
-    display:inline;
-    list-style-type:none;
-    margin: 0 4px;
-    outline: none;
-    vertical-align:top;
-}
-ul.thumbs > li img { box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
-
-/*CSS Generated from InDesign Styles*/
-body { background:#ededed; }#slider { width:396.00px; height:612.00px; }.page { width:396.00px; height:612.00px; background: #fff !important; }.paper-vertical { width:396.00px; height:100%; }.paper-horizontal { width:1624.00px; height:612.00px; margin-top:-306.00px; }@media all and (max-height:612.00px) {	.paper-horizontal { margin:0;top:0;}	#container > .page { margin:0 auto;}/*pos top for webkit+baker*/	.anythingSlider-in5 .arrow a { margin: -68px 0 0 0; }}@media all and (max-width:396.00px) {	.paper-vertical .page, .paper-horizontal .page, .anythingSlider-in5 { padding:0;margin:0;top:0;border:0; }	.paper-vertical, .paper-horizontal { padding:0; }}.mejs-audio {display:none;}span.autoCharStyle12 {	font-family:"Helvetica (T1)";}span.autoCharStyle11 {	font-size:14pt;	color:#a28700;}span.autoCharStyle10 {}span.autoCharStyle9 {	letter-spacing:-0.050em;}span.autoCharStyle8 {	font-size:9pt;}span.autoCharStyle7 {	letter-spacing:-0.010em;}span.autoCharStyle6 {}span.autoCharStyle5 {	font-size:8pt;}span.autoCharStyle4 {}span.autoCharStyle3 {	font-family:Futura;}span.autoCharStyle2 {}span.autoCharStyle1 {	color:#00b5cc;}span.None {}p.autoParaStyle16 {	font-family:"Helvetica (T1)";	font-size:9pt;	line-height:11pt;	color:#000;	letter-spacing:0.002em;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}p.autoParaStyle15 {	font-family:"Helvetica (T1)";	font-size:20pt;	line-height:24pt;	color:#009fc1;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}p.autoParaStyle14 {	font-family:"Helvetica (T1)";	font-weight:bold;	font-size:12pt;	line-height:15pt;	color:#72b743;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:center;}p.autoParaStyle13 {	font-family:"Helvetica (T1)";	font-size:10pt;	line-height:15pt;	color:#000;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:center;}p.autoParaStyle12 {	font-family:Goudy;	font-size:16pt;	line-height:14pt;	color:#009fc1;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}p.autoParaStyle11 {	font-family:Univers;	font-size:10pt;	line-height:16pt;	color:#000;	text-align:justify;}p.autoParaStyle10 {	font-family:Univers;	font-size:9pt;	line-height:13pt;	color:#000;	text-align:justify;}p.autoParaStyle9 {	font-family:Futura;	font-size:13pt;	line-height:22pt;	color:#939597;	text-align:justify;}p.autoParaStyle8 {	font-family:Futura;	font-size:13pt;	line-height:22pt;	color:#939597;	letter-spacing:-0.010em;	text-align:justify;}p.autoParaStyle7 {	font-family:Sabon;	font-weight:bold;	font-style:italic;	font-size:13pt;	line-height:15pt;	color:#009fc1;	letter-spacing:-0.010em;	text-align:left;}p.autoParaStyle6 {	font-family:Sabon;	font-weight:bold;	font-style:italic;	font-size:13pt;	line-height:21pt;	color:#939597;	letter-spacing:-0.010em;	text-align:left;}p.autoParaStyle5 {	font-family:Sabon;	font-weight:bold;	font-style:italic;	font-size:13pt;	line-height:16pt;	color:#939597;	letter-spacing:-0.010em;	text-align:left;}p.autoParaStyle4 {	font-family:Sabon;	font-weight:bold;	font-style:italic;	font-size:13pt;	line-height:10pt;	color:#939597;	letter-spacing:-0.010em;	text-align:left;}p.autoParaStyle3 {	font-family:"Helvetica (T1)";	font-size:16pt;	line-height:24pt;	color:#000;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:justify;}p.autoParaStyle2 {	font-family:BallantinesScriEFOP-Regular,serif;	font-size:41pt;	line-height:16pt;	color:#00b5cc;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}p.autoParaStyle1 {	font-family:Futura;	font-size:11pt;	line-height:24pt;	color:#000;	text-align:center;}p.Basic-Paragraph {	font-family:"Minion Pro","Times New Roman", Times, serif;	font-size:12pt;	line-height:14pt;	color:#000;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}p.No-Paragraph-Style {	font-family:"Minion Pro","Times New Roman", Times, serif;	font-size:12pt;	line-height:14pt;	color:#000;	hyphens:auto;	-moz-hyphens:auto;	-ms-hyphens:auto;	-webkit-hyphens:auto;	hyphenate-after:2;	-ms-hyphenate-after:2;	-moz-hyphenate-after:2;	-webkit-hyphenate-after:2;	hyphenate-before:2;	-ms-hyphenate-before:2;	-moz-hyphenate-before:2;	-webkit-hyphenate-before:2;	text-align:left;}#item508 {	background:#fff;	width:413px !important;	height:340px !important;	left:-18px !important;	top:286px !important;}#item621 {	width:310px !important;	height:34px !important;	left:68px !important;	top:559px !important;}#item657 {	width:359px !important;	height:42px !important;	left:36px !important;	top:371px !important;}#item680 {	width:191px !important;	height:113px !important;	left:168px !important;	top:202px !important;}#item1935 {	width:342px !important;	height:113px !important;	left:19px !important;	top:223px !important;}#item2026 {	width:448px !important;	height:43px !important;	left:36px !important;	top:211px !important;}#item2049 {	width:325px !important;	height:318px !important;	left:36px !important;	top:270px !important;}#item949 {	width:325px !important;	height:444px !important;	left:35px !important;	top:179px !important;}#in5footer {display:none;}
